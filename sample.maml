@@ -1,4 +1,4 @@
-#This is a sample MAML file
+# This is a sample MAML file
 
 # Numbers
 123 # Integer
@@ -46,13 +46,13 @@
 ; square 3
 # 9
 
-.double {.param=2; param * _};
+.double {.param 2; param * _};
 ; double 5
 # 10
 
 ## Quoting
 
 # End-of-line comment
-# Inline-comment# 123
+# Inline-comment # 123
 “Quoted String”
 \10\net#string
