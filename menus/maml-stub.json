@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle maml-stub",
+        "command": "maml-stub:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "maml-stub",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "maml-stub:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
