@@ -1,14 +1,14 @@
 {
-  "name": "maml-stub",
-  "main": "./lib/maml-stub",
+  "name": "language-maml",
+  "main": "./lib/language-maml",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Provides syntax highlighting and other tools for working with MAML in Atom",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "maml-stub:toggle"
+    "atom-workspace": "language-maml:toggle"
   },
-  "repository": "https://github.com/atom/maml-stub",
+  "repository": "https://github.com/TheSwanFactory/language-maml",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
