@@ -1,1 +1,58 @@
 #This is a sample MAML file
+
+# Numbers
+123 # Integer
+123.45 # Floating-Point
+123.45.E6 # Scientific
+0b101 # Binary
+0x9abc # Hexadecimal
+0sXYZ0123 # Base64
+
+## Tokens
+
+.variable 42 # Name
+; variable # Value
+# 42
+; .variable 113
+# 113
+
+.CONSTANT 43
+; .CONSTANT 114
+# @error
+
+; 3 .+ 3 # Operators
+# 6
+; 4 * 4 # Syntactic Sugar
+# 16
+
+## Grouping
+
+# Boxing
+
+; [1] # Boxed
+# [1]
+
+; (1) # Un-boxed
+# 1
+
+# Arrays
+; [1,2,3,]
+# [1,2,3]
+; (1,2,3)
+# [1,2,3]
+
+# Closures
+.square {_ * _}
+; square 3
+# 9
+
+.double {.param=2; param * _};
+; double 5
+# 10
+
+## Quoting
+
+# End-of-line comment
+# Inline-comment# 123
+“Quoted String”
+\10\net#string
