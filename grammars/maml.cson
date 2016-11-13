@@ -1,0 +1,3 @@
+scopeName: 'source.maml'
+name: 'MAML'
+fileTypes: ['maml','mml']
