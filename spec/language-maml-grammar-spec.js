@@ -13,7 +13,6 @@ describe('LanguageMaml', () => {
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
     activationPromise = atom.packages.activatePackage('language-maml');
-    grammar = atom.grammars.grammarForScopeName('source.maml')
   });
 
   describe('grammar', () => {
@@ -30,6 +29,8 @@ describe('LanguageMaml', () => {
       });
 
       runs(() => {
+        grammar = atom.grammars.grammarForScopeName('source.maml')
+        expect(grammar).toBeTruthy();
       });
     });
   });
