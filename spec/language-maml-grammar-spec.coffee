@@ -31,6 +31,6 @@ describe 'LanguageMaml', ->
     it 'parses inline comments', ->
       {tokens} = grammar.tokenizeLine("# I am a comment# I am not")
 
-      expect(tokens[0]).toEqual value: "#", scopes: ["source.maml", "comment.block.number-sign.maml", "punctuation.definition.comment.maml"]
+      expect(tokens[0]).toEqual value: "#", scopes: ["source.maml", "comment.block.number-sign.maml", "punctuation.definition.comment.begin.maml"]
       expect(tokens[1]).toEqual value: " I am a comment", scopes: ["source.maml", "comment.block.number-sign.maml"]
-      expect(tokens[2]).toEqual value: "#", scopes: ["source.maml", "comment.block.number-sign.maml", "punctuation.definition.comment.maml"]
+      expect(tokens[2]).toEqual value: "#", scopes: ["source.maml", "comment.block.number-sign.maml", "punctuation.definition.comment.end.maml"]

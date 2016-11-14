@@ -4,7 +4,7 @@ fileTypes: ['maml','mml']
 
 patterns: [
   {
-    match: '(#)(.*)$\\n'
+    match: '(#)([^#\\n]*)$\\n'
     name: 'comment.line.number-sign.maml'
   },
   {
