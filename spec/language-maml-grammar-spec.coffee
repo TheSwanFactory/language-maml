@@ -19,6 +19,11 @@ describe 'LanguageMaml', ->
       grammar = atom.grammars.grammarForScopeName('source.maml')
 
   describe 'grammar', ->
-    it 'loads', ->
+    it 'parses the grammar', ->
       expect(grammar).toBeTruthy();
       expect(grammar.scopeName).toBe("source.maml")
+
+    it 'parses end-of-line comments', ->
+      {tokens} = grammar.tokenizeLine("# I am a comment")
+
+      expect(tokens[0]).toEqual value: "#", scopes: ["source.maml", "comment.line.number-sign.maml", "punctuation.definition.comment.maml"]

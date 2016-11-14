@@ -5,7 +5,10 @@ fileTypes: ['maml','mml']
 'patterns': [
   {
     'begin': '#'
-    'end': '\n'
+    beginCaptures:
+      0:
+        name: 'punctuation.definition.comment.maml'
+    'end': '$'
     'name': 'comment.line.number-sign.maml'
   },
   {
