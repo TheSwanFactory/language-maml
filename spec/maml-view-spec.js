@@ -1,8 +1,8 @@
 'use babel';
 
-import MamlStubView from '../lib/maml-stub-view';
+import MamlView from '../lib/maml-view';
 
-describe('MamlStubView', () => {
+describe('MamlView', () => {
   it('has one valid test', () => {
     expect('life').toBe('easy');
   });

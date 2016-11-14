@@ -1,6 +1,6 @@
 {
   "name": "language-maml",
-  "main": "./lib/language-maml",
+  "main": "./lib/maml",
   "version": "0.2.0",
   "description": "Provides syntax highlighting and other tools for working with MAML in Atom",
   "keywords": [],
