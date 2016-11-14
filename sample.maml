@@ -55,4 +55,8 @@
 # End-of-line comment
 # Inline-comment # 123
 “Quoted String”
+“Quoted
+Multiline
+String”
+"Invalid Dumb-quote String"
 \10\net#string
