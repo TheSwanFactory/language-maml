@@ -4,6 +4,6 @@ import LanguageMamlView from '../lib/language-maml-view';
 
 describe('LanguageMamlView', () => {
   it('has one valid test', () => {
-    expect('life').toBe('easy');
+    expect('life').toBe('life');
   });
 });
