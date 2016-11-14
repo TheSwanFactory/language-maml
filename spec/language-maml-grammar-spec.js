@@ -16,11 +16,10 @@ describe('LanguageMaml', () => {
     grammar = atom.grammars.grammarForScopeName('source.maml')
   });
 
-  describe('when the language-maml:toggle event is triggered', () => {
-    it('hides and shows the modal panel', () => {
+  describe('grammar', () => {
+    it('loads', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.language-maml')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
@@ -31,15 +30,6 @@ describe('LanguageMaml', () => {
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.language-maml')).toExist();
-
-        let languageMamlElement = workspaceElement.querySelector('.language-maml');
-        expect(languageMamlElement).toExist();
-
-        let languageMamlPanel = atom.workspace.panelForItem(languageMamlElement);
-        expect(languageMamlPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'language-maml:toggle');
-        expect(languageMamlPanel.isVisible()).toBe(false);
       });
     });
   });
