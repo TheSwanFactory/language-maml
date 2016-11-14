@@ -25,6 +25,7 @@ describe('LanguageMaml', () => {
   describe('grammar', () => {
     it('loads', () => {
       expect(grammar).toBeTruthy();
+      expect(grammar.scopeName).toBe("source.maml");
     });
   });
 });
