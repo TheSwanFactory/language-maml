@@ -1,0 +1,25 @@
+scopeName: 'source.maml'
+name: 'MAML'
+fileTypes: ['maml','mml']
+
+patterns: [
+  {
+    match: '(#)([^#\\n]*)$\\n'
+    name: 'comment.line.number-sign.maml'
+  },
+  {
+    begin: '#'
+    beginCaptures:
+      0:
+        name: 'punctuation.definition.comment.begin.maml'
+    end: '#'
+    endCaptures:
+      0:
+        name:'punctuation.definition.comment.end.maml'
+    name: 'comment.block.number-sign.maml'
+  },
+  # …
+  {
+      # Last rule
+  }
+]
