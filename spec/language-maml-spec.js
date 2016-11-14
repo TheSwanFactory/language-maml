@@ -1,13 +1,13 @@
 'use babel';
 
-import MamlStub from '../lib/maml';
+import LanguageMaml from '../lib/language-maml';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('MamlStub', () => {
+describe('LanguageMaml', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('MamlStub', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.maml')).not.toExist();
+      expect(workspaceElement.querySelector('.language-maml')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
@@ -30,15 +30,15 @@ describe('MamlStub', () => {
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.maml')).toExist();
+        expect(workspaceElement.querySelector('.language-maml')).toExist();
 
-        let mamlStubElement = workspaceElement.querySelector('.maml');
-        expect(mamlStubElement).toExist();
+        let languageMamlElement = workspaceElement.querySelector('.language-maml');
+        expect(languageMamlElement).toExist();
 
-        let mamlStubPanel = atom.workspace.panelForItem(mamlStubElement);
-        expect(mamlStubPanel.isVisible()).toBe(true);
+        let languageMamlPanel = atom.workspace.panelForItem(languageMamlElement);
+        expect(languageMamlPanel.isVisible()).toBe(true);
         atom.commands.dispatch(workspaceElement, 'language-maml:toggle');
-        expect(mamlStubPanel.isVisible()).toBe(false);
+        expect(languageMamlPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,7 +51,7 @@ describe('MamlStub', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.maml')).not.toExist();
+      expect(workspaceElement.querySelector('.language-maml')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
@@ -63,10 +63,10 @@ describe('MamlStub', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let mamlStubElement = workspaceElement.querySelector('.maml');
-        expect(mamlStubElement).toBeVisible();
+        let languageMamlElement = workspaceElement.querySelector('.language-maml');
+        expect(languageMamlElement).toBeVisible();
         atom.commands.dispatch(workspaceElement, 'language-maml:toggle');
-        expect(mamlStubElement).not.toBeVisible();
+        expect(languageMamlElement).not.toBeVisible();
       });
     });
   });

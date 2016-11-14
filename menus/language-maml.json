@@ -2,7 +2,7 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle MAML",
+        "label": "Toggle language-maml",
         "command": "language-maml:toggle"
       }
     ]
