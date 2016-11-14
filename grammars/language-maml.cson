@@ -2,19 +2,19 @@ scopeName: 'source.maml'
 name: 'MAML'
 fileTypes: ['maml','mml']
 
-'patterns': [
+patterns: [
   {
-    'begin': '#'
+    begin: '#'
     beginCaptures:
       0:
         name: 'punctuation.definition.comment.maml'
-    'end': '$'
-    'name': 'comment.line.number-sign.maml'
+    end: '$'
+    name: 'comment.line.number-sign.maml'
   },
   {
-    'begin': '#'
-    'end': '#'
-    'name': 'comment.block.number-sign.maml'
+    begin: '#'
+    end: '#'
+    name: 'comment.block.number-sign.maml'
   },
   # …
   {
