@@ -13,25 +13,18 @@ describe('LanguageMaml', () => {
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
     activationPromise = atom.packages.activatePackage('language-maml');
+    waitsForPromise(() => {
+      atom.commands.dispatch(workspaceElement, 'language-maml:toggle');
+      return activationPromise;
+    });
+    runs(() => {
+      grammar = atom.grammars.grammarForScopeName('source.maml')
+    });
   });
 
   describe('grammar', () => {
     it('loads', () => {
-      // Before the activation event the view is not on the DOM, and no panel
-      // has been created
-
-      // This is an activation event, triggering it will cause the package to be
-      // activated.
-      atom.commands.dispatch(workspaceElement, 'language-maml:toggle');
-
-      waitsForPromise(() => {
-        return activationPromise;
-      });
-
-      runs(() => {
-        grammar = atom.grammars.grammarForScopeName('source.maml')
-        expect(grammar).toBeTruthy();
-      });
+      expect(grammar).toBeTruthy();
     });
   });
 });
