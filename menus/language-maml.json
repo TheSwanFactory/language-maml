@@ -4,6 +4,10 @@
       {
         "label": "Toggle language-maml",
         "command": "language-maml:toggle"
+      },
+      {
+        "label": "Insert smart quotes",
+        "command": "language-maml:insert-smart-quotes"
       }
     ]
   },
@@ -12,11 +16,15 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "language-maml",
+          "label": "MAML Language",
           "submenu": [
             {
               "label": "Toggle",
               "command": "language-maml:toggle"
+            },
+            {
+              "label": "Insert smart quotes",
+              "command": "language-maml:insert-smart-quotes"
             }
           ]
         }

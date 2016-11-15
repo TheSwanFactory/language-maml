@@ -5,7 +5,8 @@
   "description": "Provides syntax highlighting and other tools for working with MAML in Atom",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "language-maml:toggle"
+    "atom-workspace": "language-maml:toggle",
+    "atom-text-editor": "language-maml:insert-smart-quotes"
   },
   "repository": "https://github.com/TheSwanFactory/language-maml",
   "license": "MIT",
