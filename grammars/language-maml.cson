@@ -18,7 +18,17 @@ patterns: [
         name:'punctuation.definition.comment.end.maml'
     name: 'comment.block.number-sign.maml'
   },
-  # …
+  {
+    begin: '“'
+    beginCaptures:
+      0:
+        name: 'punctuation.definition.string.begin.maml'
+    end: '”'
+    endCaptures:
+      0:
+        name:'punctuation.definition.string.end.maml'
+    name: 'string.quoted.double.maml'
+  },  # …
   {
       # Last rule
   }

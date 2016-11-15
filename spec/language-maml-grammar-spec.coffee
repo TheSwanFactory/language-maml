@@ -34,3 +34,10 @@ describe 'LanguageMaml', ->
       expect(tokens[0]).toEqual value: "#", scopes: ["source.maml", "comment.block.number-sign.maml", "punctuation.definition.comment.begin.maml"]
       expect(tokens[1]).toEqual value: " I am a comment", scopes: ["source.maml", "comment.block.number-sign.maml"]
       expect(tokens[2]).toEqual value: "#", scopes: ["source.maml", "comment.block.number-sign.maml", "punctuation.definition.comment.end.maml"]
+
+    it 'parses quoted strings', ->
+      {tokens} = grammar.tokenizeLine("“Quoted String”")
+
+      expect(tokens[0]).toEqual value: "“", scopes: ["source.maml", "string.quoted.double.maml", "punctuation.definition.string.begin.maml"]
+      expect(tokens[1]).toEqual value: "Quoted String", scopes: ["source.maml", "string.quoted.double.maml"]
+      expect(tokens[2]).toEqual value: "”", scopes: ["source.maml", "string.quoted.double.maml", "punctuation.definition.string.end.maml"]
