@@ -2,4 +2,4 @@
 'atom-workspace':
   'ctrl-alt-o': "language-maml:toggle"
 'atom-text-editor':
-  '"':'language-maml:insert-smart-quotes:'
+  '"':'language-maml:insert-smart-quotes'
