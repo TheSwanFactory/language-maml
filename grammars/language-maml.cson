@@ -28,7 +28,10 @@ patterns: [
     endCaptures:
       0:
         name:'punctuation.definition.string.end.maml'
-  },  # …
+    patterns: [
+      include: '#smart_quote'
+    ]
+},  # …
   {
       # Last rule
   }
