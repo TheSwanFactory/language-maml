@@ -33,3 +33,17 @@ patterns: [
       # Last rule
   }
 ]
+
+repository:
+  smart_quote:
+    begin: '“'
+    beginCaptures:
+      0:
+        name: 'punctuation.definition.string.begin.maml'
+    end: '”'
+    endCaptures:
+      0:
+        name:'punctuation.definition.string.end.maml'
+    patterns: [
+      include: '#smart_quote'
+    ]
