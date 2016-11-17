@@ -1,5 +1,5 @@
 
 'atom-workspace':
   'ctrl-alt-o': "language-maml:toggle"
-'atom-text-editor':
+"atom-text-editor[data-grammar='source maml']":
   '"':'language-maml:insert-smart-quotes'

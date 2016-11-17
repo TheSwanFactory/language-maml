@@ -58,5 +58,7 @@
 “Quoted
 Multiline
 String”
+“Quoted “Recursive String” String”
+
 "Invalid Dumb-quote String"
 \10\net#string
